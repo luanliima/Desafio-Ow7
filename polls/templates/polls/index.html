@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Treinadores</title>
+    <link href="static/css/meuestilo.css">
+</head>
+
+<body>
+<h1 class="title"><strong>Lista de treinadores</strong></h1>
+{{ trainers }}
+
+
+<ul>
+{% for trainer in trainers %}
+    <li>{{ forloop.counter }}. {{ trainer.nome }}</li>
+{% endfor %}
+</ul>
+
+<table border="1">
+    <thead>
+        <th>Id</th>
+        <th>Nome</th>
+    </thead>
+    <tbody>
+        {% for trainer in trainers %}
+        <tr>
+        <td>{{ trainer.id }}</td>
+        <td>{{ trainer.nome }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</body>
+
+</html>
